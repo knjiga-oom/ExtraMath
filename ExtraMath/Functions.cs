@@ -4,7 +4,10 @@
     {
         public static long Factorial(int value)
         {
-            throw new NotImplementedException();
+            long result = value;
+            while (--value > 1)
+                result *= value;
+            return result;
         }
     }
 }
