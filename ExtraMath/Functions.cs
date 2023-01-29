@@ -4,6 +4,9 @@
     {
         public static long Factorial(int value)
         {
+            const int largestCalculableArgument = 20;
+            if (value < 0 || value > largestCalculableArgument)
+                throw new ArgumentOutOfRangeException(nameof(value));
             if (value == 0)
                 return 1;
             long result = value;
