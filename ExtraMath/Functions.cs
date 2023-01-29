@@ -7,11 +7,9 @@
             const int largestCalculableArgument = 20;
             if (value < 0 || value > largestCalculableArgument)
                 throw new ArgumentOutOfRangeException(nameof(value));
-            if (value == 0)
-                return 1;
-            long result = value;
-            while (--value > 1)
-                result *= value;
+            long result = 1;
+            for (int i = 2; i <= value; ++i)
+                result *= i;
             return result;
         }
     }
